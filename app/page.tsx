@@ -15,20 +15,17 @@ import {
 import Image from 'next/image';
 
 const capabilities = [
-  { icon: ServerCog, label: 'Backend AI', detail: 'FastAPI, Express, REST APIs' },
-  { icon: FileScan, label: 'Document AI', detail: 'OCR, extraction, human review' },
-  { icon: Workflow, label: 'MLOps', detail: 'MLflow, CI/CD, evaluation' },
-  { icon: Activity, label: 'Observability', detail: 'Prometheus, Grafana, alerting' },
-  { icon: Database, label: 'Data systems', detail: 'SQLite, SQL, validation' },
-  { icon: Boxes, label: 'Delivery', detail: 'Docker, Compose, GitHub Actions' },
+  { icon: ServerCog, label: 'Backend AI', detail: 'Express, REST, JWT, background jobs', href: 'https://github.com/ardiradi/flyrank-10x-solution' },
+  { icon: FileScan, label: 'Document AI', detail: 'Extraction with explicit human review', href: 'https://github.com/ardiradi/PharmaCheck-AI-Core' },
+  { icon: Workflow, label: 'MLOps', detail: 'MLflow, GridSearchCV, CI/CD', href: 'https://github.com/ardiradi/Membangun-Model-SML' },
+  { icon: Activity, label: 'Observability', detail: 'Prometheus, Grafana, alerting', href: 'https://github.com/ardiradi/Monitoring-Logging-SML' },
+  { icon: Database, label: 'Data systems', detail: 'SQLite, SQL, schema validation', href: 'https://github.com/ardiradi/flyrank-10x-solution/blob/main/src/db.js' },
+  { icon: Boxes, label: 'Delivery', detail: 'Docker, Compose, GitHub Actions', href: 'https://github.com/ardiradi/flyrank-10x-solution/blob/main/Dockerfile' },
 ];
 
 const credentials = [
-  'Claude 101',
-  'Claude Code in Action',
   'Claude with the Anthropic API',
   'Introduction to Model Context Protocol',
-  'AI Fluency: Framework and Foundations',
 ];
 
 const ExternalLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
@@ -70,10 +67,10 @@ export default function Home() {
           <ExternalLink href="https://www.linkedin.com/in/ardi-riyadi-785882364">LinkedIn</ExternalLink>
         </div>
         <div className="proof-strip" aria-label="Selected evidence">
-          <div><strong>7</strong><span>backend assignments completed</span></div>
-          <div><strong>91.8%</strong><span>heart-disease model test accuracy</span></div>
-          <div><strong>12</strong><span>production-style metrics instrumented</span></div>
-          <div><strong>4</strong><span>systems documented below</span></div>
+          <a href="https://github.com/ardiradi/flyrank-10x-solution/blob/main/test/app.test.js" target="_blank" rel="noreferrer"><strong>6</strong><span>automated capstone tests</span></a>
+          <a href="https://github.com/ardiradi/Membangun-Model-SML" target="_blank" rel="noreferrer"><strong>91.8%</strong><span>heart-disease model test accuracy</span></a>
+          <a href="https://github.com/ardiradi/Monitoring-Logging-SML" target="_blank" rel="noreferrer"><strong>12</strong><span>production-style metrics instrumented</span></a>
+          <a href="#work"><strong>4</strong><span>systems documented below</span></a>
         </div>
       </section>
 
@@ -94,7 +91,8 @@ export default function Home() {
                 <li>JWT-protected CRUD and SQLite persistence</li>
                 <li>OpenAI-compatible planner with validation, caching, quotas, and cost logs</li>
                 <li>Retryable background report jobs with polling and idempotency</li>
-                <li>Docker, Swagger documentation, and end-to-end tests</li>
+                <li>Prometheus request, latency, error, and runtime metrics</li>
+                <li>Docker, Swagger documentation, and six automated tests</li>
               </ul>
               <ExternalLink href="https://github.com/ardiradi/flyrank-10x-solution">Read the code</ExternalLink>
             </div>
@@ -170,7 +168,10 @@ export default function Home() {
               <h3>Heart Disease ML Pipeline</h3>
               <p>A four-repository learning system covering experimentation, model training, CI/CD, FastAPI inference, Prometheus metrics, Grafana dashboards, and alert rules.</p>
               <div className="stack-line">91.8% test accuracy · 5-fold GridSearchCV · 12 custom metrics</div>
-              <ExternalLink href="https://github.com/ardiradi/Monitoring-Logging-SML">Monitoring repository</ExternalLink>
+              <div className="link-row">
+                <ExternalLink href="https://github.com/ardiradi/Membangun-Model-SML">Training evidence</ExternalLink>
+                <ExternalLink href="https://github.com/ardiradi/Monitoring-Logging-SML">Monitoring evidence</ExternalLink>
+              </div>
             </div>
           </div>
         </article>
@@ -182,12 +183,12 @@ export default function Home() {
           <h2 id="capabilities-title">Useful range, one direction.</h2>
         </div>
         <div className="capability-grid">
-          {capabilities.map(({ icon: Icon, label, detail }) => (
-            <div className="capability" key={label}>
+          {capabilities.map(({ icon: Icon, label, detail, href }) => (
+            <a className="capability" href={href} target="_blank" rel="noreferrer" key={label}>
               <Icon size={20} aria-hidden="true" />
               <strong>{label}</strong>
               <span>{detail}</span>
-            </div>
+            </a>
           ))}
         </div>
       </section>
@@ -232,7 +233,7 @@ export default function Home() {
             <div key={credential}><span>{String(index + 1).padStart(2, '0')}</span><p>{credential}</p><small>Anthropic Academy · 2026</small></div>
           ))}
         </div>
-        <p className="publication">Published research: <a href="https://doi.org/10.71282/jurmie.v2i12.1452" target="_blank" rel="noreferrer">View the article <ArrowUpRight size={15} /></a></p>
+        <p className="publication">Published research comparing SVM and Random Forest for diabetes prediction: <a href="https://doi.org/10.71282/jurmie.v2i12.1452" target="_blank" rel="noreferrer">View the article <ArrowUpRight size={15} /></a></p>
       </section>
 
       <footer id="contact">
