@@ -13,6 +13,7 @@ import {
   Workflow,
 } from 'lucide-react';
 import Image from 'next/image';
+import EvidenceFinder from './evidence-finder';
 
 const capabilities = [
   { icon: ServerCog, label: 'Backend AI', detail: 'Express, REST, JWT, background jobs', href: 'https://github.com/ardiradi/flyrank-10x-solution' },
@@ -58,7 +59,7 @@ export default function Home() {
           Building from Palembang, Indonesia
         </div>
         <h1>Ardi Riyadi</h1>
-        <p className="hero-role">Backend AI engineer turning messy operational work into dependable APIs, automation, and observable ML systems.</p>
+        <p className="hero-role">Backend AI Engineer Intern building inspectable APIs, document extraction workflows, and ML learning systems.</p>
         <div className="hero-actions">
           <a className="primary-action" href="#work">
             View selected work <ArrowDown size={17} />
@@ -68,11 +69,13 @@ export default function Home() {
         </div>
         <div className="proof-strip" aria-label="Selected evidence">
           <a href="https://github.com/ardiradi/flyrank-10x-solution/blob/main/test/app.test.js" target="_blank" rel="noreferrer"><strong>6</strong><span>automated capstone tests</span></a>
-          <a href="https://github.com/ardiradi/Membangun-Model-SML" target="_blank" rel="noreferrer"><strong>91.8%</strong><span>heart-disease model test accuracy</span></a>
-          <a href="https://github.com/ardiradi/Monitoring-Logging-SML" target="_blank" rel="noreferrer"><strong>12</strong><span>production-style metrics instrumented</span></a>
+          <a href="https://github.com/ardiradi/AI-Impact-Datathon-2026/blob/main/train.py" target="_blank" rel="noreferrer"><strong>2</strong><span>inputs in the synthetic ML demo</span></a>
+          <a href="https://github.com/ardiradi/Monitoring-Logging-SML" target="_blank" rel="noreferrer"><strong>12</strong><span>metric families in a learning demo</span></a>
           <a href="#work"><strong>4</strong><span>systems documented below</span></a>
         </div>
       </section>
+
+      <EvidenceFinder />
 
       <section className="work-section" id="work">
         <div className="page-shell section-heading">
@@ -86,14 +89,16 @@ export default function Home() {
             <div className="project-copy">
               <p className="project-label">FlyRank AI capstone / 2026</p>
               <h3>Internship Progress Copilot API</h3>
-              <p>A backend service that turns scattered assignment evidence into scoped next actions and reviewer-ready PDF reports.</p>
+              <p><strong>Problem.</strong> In my self-paced internship, repeatedly checking instructions and evidence made it difficult to choose the next task.</p>
+              <p><strong>What I built.</strong> I kept the scope to tasks, next actions, and evidence. SQLite makes the demo easy to run; background PDF jobs return HTTP 202 and expose status polling.</p>
               <ul className="evidence-list">
                 <li>JWT-protected CRUD and SQLite persistence</li>
-                <li>OpenAI-compatible planner with validation, caching, quotas, and cost logs</li>
+                <li>Optional OpenAI-compatible planner with validation and caching; token logs with a zero monetary-cost placeholder</li>
                 <li>Retryable background report jobs with polling and idempotency</li>
                 <li>Prometheus request, latency, error, and runtime metrics</li>
                 <li>Docker, Swagger documentation, and six automated tests</li>
               </ul>
+              <p><strong>What came of it.</strong> Six local tests passed on 8 October 2026. The workflow produces a structured plan and a separate PDF report. The demo uses fixed planning output; real-provider calls and time savings remain unverified.</p>
               <ExternalLink href="https://github.com/ardiradi/flyrank-10x-solution">Read the code</ExternalLink>
             </div>
             <div className="terminal" aria-label="Example API response">
@@ -107,11 +112,19 @@ export default function Home() {
 200 OK
 {
   "cacheHit": false,
-  "plan": [
-    "Verify evidence",
-    "Generate progress report"
-  ]
+  "output": {
+    "summary": "Prepare the next backend task",
+    "nextActions": [
+      {
+        "title": "Review assignment evidence",
+        "reason": "Check what is complete",
+        "estimatedMinutes": 15
+      }
+    ],
+    "risks": ["Verify evidence before submission"]
+  }
 }`}</pre>
+              <p className="terminal-note">Illustrative response excerpt. Report generation uses a separate request.</p>
             </div>
           </div>
         </article>
@@ -125,7 +138,9 @@ export default function Home() {
             <div className="project-copy">
               <p className="project-label">Document intelligence / live demo</p>
               <h3>PharmaCheck AI</h3>
-              <p>A human-in-the-loop prototype for extracting and validating critical pharmaceutical label fields such as material name, batch number, and expiry date.</p>
+              <p><strong>Problem.</strong> Material name, batch number, and expiry date can be hard to locate among many label fields.</p>
+              <p><strong>What I built.</strong> I built this project independently: an image/PDF upload interface, Azure Document Intelligence extraction, and keyword mapping to three fields.</p>
+              <p><strong>What came of it.</strong> The interface preserves raw OCR for human review. Date normalization, batch validation, and a persistent audit trail are not yet implemented; extraction accuracy has not been measured.</p>
               <div className="stack-line">Python · Streamlit · Azure AI Document Intelligence</div>
               <div className="link-row">
                 <ExternalLink href="https://ard11-pharmacheck-ai.hf.space/">Try the demo</ExternalLink>
@@ -138,10 +153,12 @@ export default function Home() {
         <article className="project project-eco">
           <div className="page-shell project-grid">
             <div className="project-copy">
-              <p className="project-label">Applied ML / Indonesian MSMEs</p>
+              <p className="project-label">Applied ML / synthetic-data demo</p>
               <h3>EcoVision</h3>
-              <p>An API and dashboard exploring how macroeconomic indicators relate to purchasing-power signals for Indonesian micro and small businesses.</p>
-              <div className="stack-line">FastAPI · scikit-learn · Docker · Azure ML</div>
+              <p><strong>Problem.</strong> I wanted an input-to-prediction workflow that was simple to test and repeat.</p>
+              <p><strong>What I built.</strong> Working independently, I connected training, a FastAPI endpoint, and a dashboard. Two economic inputs keep the demo focused; 500 synthetic rows come from a formula with noise.</p>
+              <p><strong>What came of it.</strong> The model returns a simulated score with threshold-based recommendation text. It represents the assumptions in the formula; it does not establish real purchasing power or business impact.</p>
+              <div className="stack-line">FastAPI · scikit-learn · Docker · rule-based recommendations</div>
               <div className="link-row">
                 <ExternalLink href="https://prediksi-ai-ecovision-datathon.netlify.app/">Open dashboard</ExternalLink>
                 <ExternalLink href="https://github.com/ardiradi/AI-Impact-Datathon-2026">Repository</ExternalLink>
@@ -151,8 +168,7 @@ export default function Home() {
               <p>Signal inputs</p>
               <div><span>Interest rate</span><i style={{ width: '68%' }} /></div>
               <div><span>Market index</span><i style={{ width: '84%' }} /></div>
-              <div><span>Digital transactions</span><i style={{ width: '56%' }} /></div>
-              <small>Model output: purchasing-power score</small>
+              <small>Two inputs → simulated score. Bars are decorative; no live economic data is shown.</small>
             </div>
           </div>
         </article>
@@ -166,8 +182,10 @@ export default function Home() {
             <div className="project-copy">
               <p className="project-label">End-to-end MLOps</p>
               <h3>Heart Disease ML Pipeline</h3>
-              <p>A four-repository learning system covering experimentation, model training, CI/CD, FastAPI inference, Prometheus metrics, Grafana dashboards, and alert rules.</p>
-              <div className="stack-line">91.8% test accuracy · 5-fold GridSearchCV · 12 custom metrics</div>
+              <p><strong>Problem.</strong> A training score alone does not explain how to serve a model or inspect a running service.</p>
+              <p><strong>What I built.</strong> I worked independently across four learning repositories: experimentation, Random Forest training, five-fold GridSearchCV, MLflow, CI artifact upload, FastAPI inference, Prometheus, and Grafana.</p>
+              <p><strong>Result.</strong> Code and artifacts make each stage inspectable. Several exporter metrics are simulated. Accuracy figures need reconciliation to a specific run, and the project does not establish clinical or production readiness.</p>
+              <div className="stack-line">5-fold GridSearchCV · MLflow · 12 demonstration metric families</div>
               <div className="link-row">
                 <ExternalLink href="https://github.com/ardiradi/Membangun-Model-SML">Training evidence</ExternalLink>
                 <ExternalLink href="https://github.com/ardiradi/Monitoring-Logging-SML">Monitoring evidence</ExternalLink>
@@ -205,7 +223,7 @@ export default function Home() {
               <time>Jul 2026 — Present</time>
               <h3>Backend AI Engineer Intern</h3>
               <p>FlyRank AI · Remote</p>
-              <span>Seven backend assignments completed; 10x capstone submitted for mentor review.</span>
+              <span>Seven backend assignments submitted; Your 10x Solution capstone approved on 6 September 2026.</span>
             </article>
             <article>
               <time>2026</time>
@@ -241,7 +259,7 @@ export default function Home() {
           <div>
             <p className="section-index">05 / Contact</p>
             <h2>Bring me a real workflow.</h2>
-            <p>Open to backend AI, document intelligence, ML prototype, and MLOps collaboration.</p>
+            <p>Hiring a junior backend AI engineer for a remote product team? Email me to discuss the role and the workflow you need help building.</p>
           </div>
           <div className="contact-links">
             <a href="mailto:ardiriadi72@gmail.com"><Mail size={18} />Email<ArrowUpRight size={16} /></a>

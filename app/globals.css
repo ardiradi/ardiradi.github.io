@@ -202,3 +202,20 @@ footer { padding: 100px 0 28px; background: var(--green); border-top: 1px solid 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+.evidence-finder { padding-block: 64px; border-top: 1px solid var(--line); }
+.evidence-finder h2 { margin-top: 14px; font-size: 36px; }
+.evidence-finder > p { margin-block: 14px; }
+.evidence-search { display: grid; gap: 8px; max-width: 620px; margin-top: 26px; font-weight: 600; }
+.evidence-search input { width: 100%; padding: 14px; border: 1px solid var(--ink); border-radius: var(--radius); background: white; color: var(--ink); font: inherit; }
+.evidence-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.evidence-filters button { padding: 10px 16px; border: 1px solid var(--ink); border-radius: var(--radius); background: white; color: var(--ink); cursor: pointer; font: inherit; }
+.evidence-filters button[aria-pressed="true"] { background: var(--blue); color: white; }
+.evidence-count { color: var(--muted); }
+.evidence-results { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.evidence-results article { padding: 24px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); }
+.evidence-results h3 { font-size: 22px; margin-block: 14px; }
+.evidence-results p { margin-block: 16px; line-height: 1.6; }
+.evidence-limit { color: var(--muted); }
+.terminal-note { margin: 0; padding: 0 28px 24px; font-size: 12px; line-height: 1.5; }
+@media (max-width: 620px) { .evidence-results { grid-template-columns: 1fr; } .evidence-finder h2 { font-size: 30px; } }
