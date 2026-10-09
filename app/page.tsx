@@ -141,7 +141,7 @@ export default function Home() {
               <p><strong>Problem.</strong> Material name, batch number, and expiry date can be hard to locate among many label fields.</p>
               <p><strong>What I built.</strong> I built this project independently: an image/PDF upload interface, Azure Document Intelligence extraction, and keyword mapping to three fields.</p>
               <p><strong>What came of it.</strong> The interface preserves raw OCR for human review. Date normalization, batch validation, and a persistent audit trail are not yet implemented; extraction accuracy has not been measured.</p>
-              <p><strong>Demo availability.</strong> The hosted Space reported an error when checked on 8 and 9 October 2026. Docker recovery preparation is available in the repository; deployment and real OCR verification are still pending.</p>
+              <p><strong>Demo availability.</strong> The Docker deployment, image upload, and preview were verified on 10 October 2026. One Azure OCR attempt failed; the owner confirmed that the Azure resource is inactive. Extraction is currently unavailable, and no successful OCR result is claimed.</p>
               <div className="stack-line">Python · Streamlit · Azure AI Document Intelligence</div>
               <div className="link-row">
                 <ExternalLink href="https://ard11-pharmacheck-ai.hf.space/">PharmaCheck Space status</ExternalLink>
