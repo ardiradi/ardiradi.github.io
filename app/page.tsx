@@ -98,7 +98,7 @@ export default function Home() {
                 <li>Prometheus request, latency, error, and runtime metrics</li>
                 <li>Docker, Swagger documentation, and six automated tests</li>
               </ul>
-              <p><strong>What came of it.</strong> Six local tests passed on 8 October 2026. The workflow produces a structured plan and a separate PDF report. The demo uses fixed planning output; real-provider calls and time savings remain unverified.</p>
+              <p><strong>What came of it.</strong> Six local tests passed. Three isolated synthetic API workflows on 9 October 2026 completed task, plan, evidence, and PDF generation with a median of 2.7 seconds. The demo uses fixed planning output; real-provider calls, human interaction time, and tenfold savings remain unverified.</p>
               <ExternalLink href="https://github.com/ardiradi/flyrank-10x-solution">Copilot repository</ExternalLink>
             </div>
             <div className="terminal" aria-label="Example API response">
@@ -141,7 +141,7 @@ export default function Home() {
               <p><strong>Problem.</strong> Material name, batch number, and expiry date can be hard to locate among many label fields.</p>
               <p><strong>What I built.</strong> I built this project independently: an image/PDF upload interface, Azure Document Intelligence extraction, and keyword mapping to three fields.</p>
               <p><strong>What came of it.</strong> The interface preserves raw OCR for human review. Date normalization, batch validation, and a persistent audit trail are not yet implemented; extraction accuracy has not been measured.</p>
-              <p><strong>Demo availability.</strong> The hosted Space reported an error when checked on 8 and 9 October 2026.</p>
+              <p><strong>Demo availability.</strong> The hosted Space reported an error when checked on 8 and 9 October 2026. Docker recovery preparation is available in the repository; deployment and real OCR verification are still pending.</p>
               <div className="stack-line">Python · Streamlit · Azure AI Document Intelligence</div>
               <div className="link-row">
                 <ExternalLink href="https://ard11-pharmacheck-ai.hf.space/">PharmaCheck Space status</ExternalLink>
@@ -224,7 +224,7 @@ export default function Home() {
               <time>Jul 2026 — Present</time>
               <h3>Backend AI Engineer Intern</h3>
               <p>FlyRank AI · Remote</p>
-              <span>Eight backend assignments submitted; Your 10x Solution capstone approved on 6 September 2026.</span>
+              <span>Nine backend assignments submitted; Your 10x Solution capstone approved on 6 September 2026.</span>
             </article>
             <article>
               <time>2026</time>
