@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 const evidence = [
   { name: 'Internship Progress Copilot', area: 'Backend', claim: 'Six local tests cover API health, authentication, CRUD, metrics, planning cache, and PDF jobs.', limit: 'Planning tests use deterministic demo output. Time savings and real-provider calls have not been measured.', url: 'https://github.com/ardiradi/flyrank-10x-solution/blob/main/test/app.test.js' },
-  { name: 'PharmaCheck AI', area: 'Document AI', claim: 'An upload workflow maps Azure Document Intelligence key-value output to three label fields and preserves raw OCR for review.', limit: 'Date normalization, batch validation, and a persistent audit trail are not implemented.', url: 'https://github.com/ardiradi/PharmaCheck-AI-Core/blob/main/app.py' },
+  { name: 'PharmaCheck AI', area: 'Document AI', claim: 'An upload workflow maps Azure Document Intelligence key-value output to three label fields and preserves raw OCR for review.', limit: 'Date normalization, batch validation, and a persistent audit trail are not implemented. The hosted demo reported a Space error when checked on 8 and 9 October 2026.', url: 'https://github.com/ardiradi/PharmaCheck-AI-Core/blob/main/app.py' },
   { name: 'EcoVision', area: 'ML', claim: 'A two-input FastAPI prediction flow connects a synthetic-data Random Forest model to a dashboard.', limit: 'The 500 training rows and target formula are synthetic. The score has not been economically validated.', url: 'https://github.com/ardiradi/AI-Impact-Datathon-2026/blob/main/train.py' },
   { name: 'Heart Disease ML Pipeline', area: 'MLOps', claim: 'Inspectable training, CI artifacts, inference metrics, and a twelve-family monitoring demonstration.', limit: 'Several exporter metrics are simulated. Conflicting accuracy artifacts need reconciliation to a specific run.', url: 'https://github.com/ardiradi/Monitoring-Logging-SML' },
 ];
@@ -21,11 +21,11 @@ export default function EvidenceFinder() {
     <div className="evidence-filters" aria-label="Filter evidence by skill">
       {['All', 'Backend', 'Document AI', 'ML', 'MLOps'].map(value => <button key={value} type="button" aria-pressed={area === value} onClick={() => setArea(value)}>{value}</button>)}
     </div>
-    <p className="evidence-count" role="status">{results.length} {results.length === 1 ? 'project' : 'projects'} found</p>
+    <output className="evidence-count">{results.length} {results.length === 1 ? 'project' : 'projects'} found</output>
     <div className="evidence-results">{results.map(item => <article key={item.name}>
       <span className="section-index">{item.area}</span><h3>{item.name}</h3>
       <p>{item.claim}</p><p className="evidence-limit"><strong>Limits:</strong> {item.limit}</p>
-      <a className="text-link" href={item.url} target="_blank" rel="noreferrer">Inspect source ↗</a>
+      <a className="text-link" href={item.url} target="_blank" rel="noreferrer">{item.name} source <span aria-hidden="true">↗</span></a>
     </article>)}</div>
     {results.length === 0 && <p>No matching evidence. Clear the search or choose another skill.</p>}
   </section>;

@@ -81,7 +81,7 @@ export default function Home() {
         <div className="page-shell section-heading">
           <p className="section-index">01 / Selected work</p>
           <h2>Systems with receipts.</h2>
-          <p>Every project below links to code, a working demo, or concrete implementation evidence.</p>
+          <p>Every project below links to code or documented implementation evidence.</p>
         </div>
 
         <article className="project project-capstone">
@@ -99,7 +99,7 @@ export default function Home() {
                 <li>Docker, Swagger documentation, and six automated tests</li>
               </ul>
               <p><strong>What came of it.</strong> Six local tests passed on 8 October 2026. The workflow produces a structured plan and a separate PDF report. The demo uses fixed planning output; real-provider calls and time savings remain unverified.</p>
-              <ExternalLink href="https://github.com/ardiradi/flyrank-10x-solution">Read the code</ExternalLink>
+              <ExternalLink href="https://github.com/ardiradi/flyrank-10x-solution">Copilot repository</ExternalLink>
             </div>
             <div className="terminal" aria-label="Example API response">
               <div className="terminal-bar"><span /><span /><span /><code>POST /ai/next-actions</code></div>
@@ -136,15 +136,16 @@ export default function Home() {
               <figcaption>Test input used in the public repository</figcaption>
             </figure>
             <div className="project-copy">
-              <p className="project-label">Document intelligence / live demo</p>
+              <p className="project-label">Document intelligence / prototype</p>
               <h3>PharmaCheck AI</h3>
               <p><strong>Problem.</strong> Material name, batch number, and expiry date can be hard to locate among many label fields.</p>
               <p><strong>What I built.</strong> I built this project independently: an image/PDF upload interface, Azure Document Intelligence extraction, and keyword mapping to three fields.</p>
               <p><strong>What came of it.</strong> The interface preserves raw OCR for human review. Date normalization, batch validation, and a persistent audit trail are not yet implemented; extraction accuracy has not been measured.</p>
+              <p><strong>Demo availability.</strong> The hosted Space reported an error when checked on 8 and 9 October 2026.</p>
               <div className="stack-line">Python · Streamlit · Azure AI Document Intelligence</div>
               <div className="link-row">
-                <ExternalLink href="https://ard11-pharmacheck-ai.hf.space/">Try the demo</ExternalLink>
-                <ExternalLink href="https://github.com/ardiradi/PharmaCheck-AI-Core">Repository</ExternalLink>
+                <ExternalLink href="https://ard11-pharmacheck-ai.hf.space/">PharmaCheck Space status</ExternalLink>
+                <ExternalLink href="https://github.com/ardiradi/PharmaCheck-AI-Core">PharmaCheck repository</ExternalLink>
               </div>
             </div>
           </div>
@@ -161,7 +162,7 @@ export default function Home() {
               <div className="stack-line">FastAPI · scikit-learn · Docker · rule-based recommendations</div>
               <div className="link-row">
                 <ExternalLink href="https://prediksi-ai-ecovision-datathon.netlify.app/">Open dashboard</ExternalLink>
-                <ExternalLink href="https://github.com/ardiradi/AI-Impact-Datathon-2026">Repository</ExternalLink>
+                <ExternalLink href="https://github.com/ardiradi/AI-Impact-Datathon-2026">EcoVision repository</ExternalLink>
               </div>
             </div>
             <div className="signal-panel" aria-label="EcoVision model inputs">
@@ -187,8 +188,8 @@ export default function Home() {
               <p><strong>Result.</strong> Code and artifacts make each stage inspectable. Several exporter metrics are simulated. Accuracy figures need reconciliation to a specific run, and the project does not establish clinical or production readiness.</p>
               <div className="stack-line">5-fold GridSearchCV · MLflow · 12 demonstration metric families</div>
               <div className="link-row">
-                <ExternalLink href="https://github.com/ardiradi/Membangun-Model-SML">Training evidence</ExternalLink>
-                <ExternalLink href="https://github.com/ardiradi/Monitoring-Logging-SML">Monitoring evidence</ExternalLink>
+                <ExternalLink href="https://github.com/ardiradi/Membangun-Model-SML">Heart Disease training repository</ExternalLink>
+                <ExternalLink href="https://github.com/ardiradi/Monitoring-Logging-SML">Heart Disease monitoring repository</ExternalLink>
               </div>
             </div>
           </div>
@@ -223,7 +224,7 @@ export default function Home() {
               <time>Jul 2026 — Present</time>
               <h3>Backend AI Engineer Intern</h3>
               <p>FlyRank AI · Remote</p>
-              <span>Seven backend assignments submitted; Your 10x Solution capstone approved on 6 September 2026.</span>
+              <span>Eight backend assignments submitted; Your 10x Solution capstone approved on 6 September 2026.</span>
             </article>
             <article>
               <time>2026</time>

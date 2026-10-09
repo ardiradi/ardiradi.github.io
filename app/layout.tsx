@@ -6,17 +6,27 @@ const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Ardi Riyadi — Backend AI Engineer',
-  description: 'Backend AI engineer building dependable APIs, document intelligence, automation, and observable ML systems.',
+  metadataBase: new URL('https://ardiradi.github.io/'),
+  title: 'Ardi Riyadi — Backend AI Engineer Intern',
+  description: 'Backend AI engineer intern building inspectable APIs, document extraction prototypes, and ML learning systems with public implementation evidence.',
+  alternates: {
+    canonical: 'https://ardiradi.github.io/',
+  },
+  icons: {
+    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
+  },
   openGraph: {
-    title: 'Ardi Riyadi — Backend AI Engineer',
-    description: 'Selected backend AI, document intelligence, and MLOps work with public evidence.',
+    title: 'Ardi Riyadi — Backend AI Engineer Intern',
+    description: 'Inspectable backend APIs, document extraction prototypes, and MLOps learning projects with public evidence.',
+    url: 'https://ardiradi.github.io/',
     type: 'website',
+    images: [{ url: 'https://ardiradi.github.io/social-preview.jpg', width: 1521, height: 762, alt: 'Evidence Finder in Ardi Riyadi backend AI portfolio' }],
   },
   twitter: {
-    card: 'summary',
-    title: 'Ardi Riyadi — Backend AI Engineer',
-    description: 'Selected backend AI, document intelligence, and MLOps work with public evidence.',
+    card: 'summary_large_image',
+    title: 'Ardi Riyadi — Backend AI Engineer Intern',
+    description: 'Inspectable backend APIs, document extraction prototypes, and MLOps learning projects with public evidence.',
+    images: [{ url: 'https://ardiradi.github.io/social-preview.jpg', alt: 'Evidence Finder in Ardi Riyadi backend AI portfolio' }],
   },
 };
 
