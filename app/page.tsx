@@ -139,10 +139,10 @@ export default function Home() {
               <p className="project-label">Document intelligence / prototype</p>
               <h3>PharmaCheck AI</h3>
               <p><strong>Problem.</strong> Material name, batch number, and expiry date can be hard to locate among many label fields.</p>
-              <p><strong>What I built.</strong> I built this project independently: an image/PDF upload interface, Azure Document Intelligence extraction, and keyword mapping to three fields.</p>
-              <p><strong>What came of it.</strong> The interface preserves raw OCR for human review. Date normalization, batch validation, and a persistent audit trail are not yet implemented; extraction accuracy has not been measured.</p>
-              <p><strong>Demo availability.</strong> The Docker deployment, image upload, and preview were verified on 10 October 2026. One Azure OCR attempt failed; the owner confirmed that the Azure resource is inactive. Extraction is currently unavailable, and no successful OCR result is claimed.</p>
-              <div className="stack-line">Python · Streamlit · Azure AI Document Intelligence</div>
+              <p><strong>What I built.</strong> I built the original Azure extraction prototype independently. Recovery with AI assistance added Tesseract OCR on the application server, bounded image/PDF processing, and explicit missing or conflicting field candidates. Azure remains optional.</p>
+              <p><strong>What came of it.</strong> Fifty-seven local tests passed, including native JPEG and two-page PDF OCR. One hosted JPEG trial matched the three visible label values. Raw text still misread 50 mg as 30 mg; general accuracy is unmeasured. Date normalization, batch validation, and a persistent audit trail are not implemented.</p>
+              <p><strong>Demo availability.</strong> Docker deployment, upload, preview, and one local OCR extraction were verified on 10 October 2026. The default mode needs no Azure account or API key. The earlier Azure trial failed and its resource is inactive; PDF OCR was tested locally, while the hosted trial used JPEG.</p>
+              <div className="stack-line">Python · Streamlit · Tesseract OCR · optional Azure Document Intelligence</div>
               <div className="link-row">
                 <ExternalLink href="https://ard11-pharmacheck-ai.hf.space/">PharmaCheck Space status</ExternalLink>
                 <ExternalLink href="https://github.com/ardiradi/PharmaCheck-AI-Core">PharmaCheck repository</ExternalLink>
