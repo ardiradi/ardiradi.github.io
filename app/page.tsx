@@ -71,7 +71,7 @@ export default function Home() {
           <a href="https://github.com/ardiradi/flyrank-10x-solution/blob/main/test/app.test.js" target="_blank" rel="noreferrer"><strong>6</strong><span>automated capstone tests</span></a>
           <a href="https://github.com/ardiradi/AI-Impact-Datathon-2026/blob/main/train.py" target="_blank" rel="noreferrer"><strong>2</strong><span>inputs in the synthetic ML demo</span></a>
           <a href="https://github.com/ardiradi/Monitoring-Logging-SML" target="_blank" rel="noreferrer"><strong>12</strong><span>metric families in a learning demo</span></a>
-          <a href="#work"><strong>4</strong><span>systems documented below</span></a>
+          <a href="#work"><strong>5</strong><span>systems documented below</span></a>
         </div>
       </section>
 
@@ -125,6 +125,44 @@ export default function Home() {
   }
 }`}</pre>
               <p className="terminal-note">Illustrative response excerpt. Report generation uses a separate request.</p>
+            </div>
+          </div>
+        </article>
+
+        <article className="project project-scraper">
+          <div className="page-shell project-grid">
+            <div className="project-copy">
+              <p className="project-label">Backend data pipeline / practice-site scope</p>
+              <h3>The Polite Scraper</h3>
+              <p><strong>Problem.</strong> A small practice dataset needed clean, traceable records. Repeated runs should reuse downloaded pages, and a failed request should be visible without discarding valid data.</p>
+              <p><strong>What was built.</strong> This AI-assisted Python project uses Requests, Beautiful Soup, and Pydantic to follow the first three Books to Scrape catalogue pages, extract book details, validate the records, and write JSON. Cached HTML retains its original fetch time. Canonical URLs prevent duplicate records. Live requests identify the scraper, use a ten-second timeout, and wait at least half a second after the previous request finishes. Catalogue and detail requests retry a timeout or HTTP 5xx once; HTTP 403 and 404 are not retried.</p>
+              <p><strong>What came of it.</strong> The saved clean report contains 60 valid, unique records. Its offline rerun used 63 HTML cache hits and zero HTTP requests, with byte-identical output confirmed separately. An additional deliberately nonexistent URL made one real HTTP 404 request; the run logged the failure and retained all 60 valid records. The repository includes seven stage commits and a historical log of 22 passing offline tests.</p>
+              <p><strong>Limits.</strong> This is a three-page practice-site pipeline. Cached output is not fresh live data. The additional-URL failure trial is separate from the fixture test where one of 60 detail pages fails and 59 valid records survive. Implementation and verification used AI assistance; no handwritten-versus-AI comparison was performed. The assignment is submitted and awaiting review.</p>
+              <div className="stack-line">Python · Requests · Beautiful Soup · Pydantic · cached HTML</div>
+              <div className="link-row">
+                <ExternalLink href="https://github.com/ardiradi/flyrank-polite-scraper/blob/36681491102946be58769d9b05c813e74e287a10/scraper/README.md">Scraper implementation</ExternalLink>
+                <ExternalLink href="https://github.com/ardiradi/flyrank-polite-scraper/blob/36681491102946be58769d9b05c813e74e287a10/scraper/samples/clean/run-report.json">Cached run report</ExternalLink>
+                <ExternalLink href="https://github.com/ardiradi/flyrank-polite-scraper/blob/36681491102946be58769d9b05c813e74e287a10/scraper/samples/broken-url/run-report.json">HTTP 404 run report</ExternalLink>
+              </div>
+            </div>
+            <div className="terminal" aria-label="Saved cached-run and additional-URL failure evidence">
+              <div className="terminal-bar"><span /><span /><span /><code>Saved run reports · 8 October 2026</code></div>
+              <pre>{`Cached offline rerun
+{
+  "valid_records": 60,
+  "invalid_records": 0,
+  "cache_hits": 63,
+  "http_requests": 0,
+  "failed_pages": 0
+}
+
+Additional nonexistent URL
+{
+  "valid_records": 60,
+  "http_requests": 1,
+  "failed_pages": 1
+}`}</pre>
+              <p className="terminal-note">Excerpts from two saved reports. Cached input is not fresh live data; a separate offline fixture retains 59 records when one detail page fails.</p>
             </div>
           </div>
         </article>
