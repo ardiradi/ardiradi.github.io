@@ -259,10 +259,10 @@ Additional nonexistent URL
           </div>
           <div className="timeline">
             <article>
-              <time>Jul 2026 — Present</time>
+              <time>Jul 2026 - Aug 2026</time>
               <h3>Backend AI Engineer Intern</h3>
               <p>FlyRank AI · Remote</p>
-              <span>Nine backend assignments submitted; Your 10x Solution capstone approved on 6 September 2026.</span>
+              <span>Nine backend assignments submitted; Your 10x Solution capstone approved on 6 September 2026. The Backend track certificate was issued on 10 October 2026.</span>
             </article>
             <article>
               <time>2026</time>
@@ -306,6 +306,9 @@ Additional nonexistent URL
             <a href="https://github.com/ardiradi" target="_blank" rel="noreferrer"><Code2 size={18} />GitHub<ArrowUpRight size={16} /></a>
             <span><MapPin size={18} />Palembang, Indonesia</span>
           </div>
+        </div>
+        <div className="page-shell">
+          <p className="publication">FlyRank AI Internship — Backend AI Engineering · 1 July–31 August 2026. <ExternalLink href="https://internship.flyrank.ai/verify/FR-D11-D157B-A91F9?first_name=Ardi">Verify the Backend track certificate</ExternalLink></p>
         </div>
         <div className="page-shell footer-bottom"><span>Ardi Riyadi · 2026</span><span>Built around evidence, not adjectives.</span></div>
       </footer>

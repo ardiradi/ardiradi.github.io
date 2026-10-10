@@ -24,13 +24,13 @@ The recorded resolution is specific to this build attempt. It is not a claim tha
 
 ## Verification and limits
 
-Historical live Chrome checks covered four initial projects, one ML result, an EcoVision search, zero results for an unmatched query, and one Backend result. The fifth Polite Scraper case was published on 10 October after Ardi confirmed reading the case and evidence wording aloud. [Release4fec946](https://github.com/ardiradi/ardiradi.github.io/commit/4fec946d717ce2140e419b6ff0e3e400da1b3e15) passed its build, Pages deployment, and six exact-file HTTP checks. Fresh five-case browser QA is tracked separately; these static checks do not establish a physical-phone or human review pass.
+Historical live Chrome checks covered four initial projects, one ML result, an EcoVision search, zero results for an unmatched query, and one Backend result. The fifth Polite Scraper case was published on 10 October after Ardi confirmed reading the case and evidence wording aloud. [Release 4fec946](https://github.com/ardiradi/ardiradi.github.io/commit/4fec946d717ce2140e419b6ff0e3e400da1b3e15) passed its build, Pages deployment, and six exact-file HTTP checks. Fresh five-case browser QA is tracked separately; these static checks do not establish a physical-phone or human review pass.
 
 The project cases retain their verification boundaries:
 
 - Internship Progress Copilot reports six passing local-demo tests covering API health, authentication, task CRUD, metrics, planning cache, and PDF jobs. Real-provider behavior, production use, and a tenfold time saving are not established.
 - PharmaCheck maps document-extraction output to three fields and preserves raw OCR for review. Date normalization, batch validation, and a persistent audit trail are not implemented.
-- The Polite Scraper's saved offline rerun reports 60 valid records, 63 HTML cache hits, and zero HTTP requests. One added real HTTP404 preserved all60; a separate offline fixture preserves59 when one original detail fails. Cached data is not a fresh crawl. The historical test log records22 passing offline tests, and submission review remains pending.
+- The Polite Scraper's saved offline rerun reports 60 valid records, 63 HTML cache hits, and zero HTTP requests. One added real HTTP 404 preserved all 60; a separate offline fixture preserves 59 when one original detail fails. Cached data is not a fresh crawl. The historical test log records 22 passing offline tests, and submission review remains pending.
 - EcoVision uses 500 synthetic training rows and a constructed target formula. Its score is not economically validated.
 - The Heart Disease ML learning pipeline includes simulated exporter metrics. Conflicting accuracy artifacts still need reconciliation to a specific run.
 
