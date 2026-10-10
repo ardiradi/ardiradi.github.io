@@ -54,12 +54,13 @@ export default function Home() {
       </header>
 
       <section className="hero page-shell" id="top">
+        <div className="hero-intro">
         <div className="hero-kicker">
-          <span className="status-dot" aria-hidden="true" />
-          Building from Palembang, Indonesia
+          Palembang, Indonesia
         </div>
         <h1>Ardi Riyadi</h1>
-        <p className="hero-role">Backend AI Engineer Intern building inspectable APIs, document extraction workflows, and ML learning systems.</p>
+        <p className="hero-role">APIs, document extraction, and ML learning systems.</p>
+        <p className="hero-context">Backend AI engineering portfolio. Explore the code, tests, and limitations in each project.</p>
         <div className="hero-actions">
           <a className="primary-action" href="#work">
             View selected work <ArrowDown size={17} />
@@ -67,11 +68,21 @@ export default function Home() {
           <ExternalLink href="https://github.com/ardiradi">GitHub</ExternalLink>
           <ExternalLink href="https://www.linkedin.com/in/ardi-riyadi-785882364">LinkedIn</ExternalLink>
         </div>
-        <div className="proof-strip" aria-label="Selected evidence">
-          <a href="https://github.com/ardiradi/flyrank-10x-solution/blob/main/test/app.test.js" target="_blank" rel="noreferrer"><strong>6</strong><span>automated capstone tests</span></a>
-          <a href="https://github.com/ardiradi/AI-Impact-Datathon-2026/blob/main/train.py" target="_blank" rel="noreferrer"><strong>2</strong><span>inputs in the synthetic ML demo</span></a>
-          <a href="https://github.com/ardiradi/Monitoring-Logging-SML" target="_blank" rel="noreferrer"><strong>12</strong><span>metric families in a learning demo</span></a>
-          <a href="#work"><strong>5</strong><span>systems documented below</span></a>
+        </div>
+        <div className="featured-work" aria-labelledby="featured-title">
+          <h2 id="featured-title">Backend projects</h2>
+          <a href="#copilot">
+            <span>FlyRank capstone</span>
+            <h3>Internship Progress Copilot</h3>
+            <p>JWT, SQLite, background PDF jobs. Six local tests.</p>
+            <span className="featured-link">Read the case <ArrowDown size={15} aria-hidden="true" /></span>
+          </a>
+          <a href="#scraper">
+            <span>Python data pipeline</span>
+            <h3>The Polite Scraper</h3>
+            <p>Validated JSON and cached runs. Sixty valid records in the cached rerun.</p>
+            <span className="featured-link">Read the case <ArrowDown size={15} aria-hidden="true" /></span>
+          </a>
         </div>
       </section>
 
@@ -80,11 +91,11 @@ export default function Home() {
       <section className="work-section" id="work">
         <div className="page-shell section-heading">
           <p className="section-index">01 / Selected work</p>
-          <h2>Systems with receipts.</h2>
+          <h2>Selected projects</h2>
           <p>Every project below links to code or documented implementation evidence.</p>
         </div>
 
-        <article className="project project-capstone">
+        <article className="project project-capstone" id="copilot">
           <div className="page-shell project-grid">
             <div className="project-copy">
               <p className="project-label">FlyRank AI capstone / 2026</p>
@@ -102,7 +113,7 @@ export default function Home() {
               <ExternalLink href="https://github.com/ardiradi/flyrank-10x-solution">Copilot repository</ExternalLink>
             </div>
             <div className="terminal" aria-label="Example API response">
-              <div className="terminal-bar"><span /><span /><span /><code>POST /ai/next-actions</code></div>
+              <div className="terminal-bar"><code>POST /ai/next-actions</code></div>
               <pre>{`{
   "goal": "Finish track",
   "constraints": ["free tools"],
@@ -129,7 +140,7 @@ export default function Home() {
           </div>
         </article>
 
-        <article className="project project-scraper">
+        <article className="project project-scraper" id="scraper">
           <div className="page-shell project-grid">
             <div className="project-copy">
               <p className="project-label">Backend data pipeline / practice-site scope</p>
@@ -146,7 +157,7 @@ export default function Home() {
               </div>
             </div>
             <div className="terminal" aria-label="Saved cached-run and additional-URL failure evidence">
-              <div className="terminal-bar"><span /><span /><span /><code>Saved run reports · 8 October 2026</code></div>
+              <div className="terminal-bar"><code>Saved run reports · 8 October 2026</code></div>
               <pre>{`Cached offline rerun
 {
   "valid_records": 60,
@@ -167,7 +178,7 @@ Additional nonexistent URL
           </div>
         </article>
 
-        <article className="project project-pharma">
+        <article className="project project-pharma" id="pharma">
           <div className="page-shell project-grid image-first">
             <figure className="project-media pharma-media">
               <Image unoptimized src="/work/pharmacheck-input.jpg" alt="A pharmaceutical label used to test PharmaCheck's document extraction workflow" width={2048} height={2048} />
@@ -189,7 +200,7 @@ Additional nonexistent URL
           </div>
         </article>
 
-        <article className="project project-eco">
+        <article className="project project-eco" id="ecovision">
           <div className="page-shell project-grid">
             <div className="project-copy">
               <p className="project-label">Applied ML / synthetic-data demo</p>
@@ -203,16 +214,19 @@ Additional nonexistent URL
                 <ExternalLink href="https://github.com/ardiradi/AI-Impact-Datathon-2026">EcoVision repository</ExternalLink>
               </div>
             </div>
-            <div className="signal-panel" aria-label="EcoVision model inputs">
-              <p>Signal inputs</p>
-              <div><span>Interest rate</span><i style={{ width: '68%' }} /></div>
-              <div><span>Market index</span><i style={{ width: '84%' }} /></div>
-              <small>Two inputs → simulated score. Bars are decorative; no live economic data is shown.</small>
+            <div className="signal-panel" aria-label="EcoVision prediction flow">
+              <p>Prediction flow</p>
+              <ol>
+                <li><strong>Two inputs</strong><span>Interest rate and market index</span></li>
+                <li><strong>Synthetic model</strong><span>Random Forest trained on simulated rows</span></li>
+                <li><strong>Simulated score</strong><span>FastAPI response displayed in a dashboard</span></li>
+              </ol>
+              <small>No live economic data. The score represents the assumptions in the synthetic training formula.</small>
             </div>
           </div>
         </article>
 
-        <article className="project project-mlops">
+        <article className="project project-mlops" id="mlops">
           <div className="page-shell project-grid image-first">
             <figure className="project-media dashboard-media">
               <Image unoptimized src="/work/mlops-grafana.jpg" alt="Grafana dashboard monitoring a heart-disease machine-learning API" width={1920} height={1080} />
@@ -237,7 +251,7 @@ Additional nonexistent URL
       <section className="capabilities page-shell" aria-labelledby="capabilities-title">
         <div className="section-heading compact">
           <p className="section-index">02 / What I build with</p>
-          <h2 id="capabilities-title">Useful range, one direction.</h2>
+          <h2 id="capabilities-title">Tools used in these projects</h2>
         </div>
         <div className="capability-grid">
           {capabilities.map(({ icon: Icon, label, detail, href }) => (
@@ -254,7 +268,7 @@ Additional nonexistent URL
         <div className="page-shell experience-grid">
           <div className="section-heading compact">
             <p className="section-index">03 / Experience</p>
-            <h2>Learning by shipping.</h2>
+            <h2>Experience</h2>
             <p>I work across the path from ambiguous workflow to documented, testable system.</p>
           </div>
           <div className="timeline">
@@ -297,7 +311,7 @@ Additional nonexistent URL
         <div className="page-shell footer-grid">
           <div>
             <p className="section-index">05 / Contact</p>
-            <h2>Bring me a real workflow.</h2>
+            <h2>Contact</h2>
             <p>Hiring a junior backend AI engineer for a remote product team? Email me to discuss the role and the workflow you need help building.</p>
           </div>
           <div className="contact-links">
@@ -310,7 +324,7 @@ Additional nonexistent URL
         <div className="page-shell">
           <p className="publication">FlyRank AI Internship — Backend AI Engineering · 1 July–31 August 2026. <ExternalLink href="https://internship.flyrank.ai/verify/FR-D11-D157B-A91F9?first_name=Ardi">Verify the Backend track certificate</ExternalLink></p>
         </div>
-        <div className="page-shell footer-bottom"><span>Ardi Riyadi · 2026</span><span>Built around evidence, not adjectives.</span></div>
+        <div className="page-shell footer-bottom"><span>Ardi Riyadi · 2026</span><a href="#top">Back to top <ArrowUpRight size={14} aria-hidden="true" /></a></div>
       </footer>
     </main>
   );
