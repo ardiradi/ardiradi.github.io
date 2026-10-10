@@ -41,7 +41,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="Ardi Riyadi, back to top">
-          AR<span>/26</span>
+          Ardi Riyadi
         </a>
         <nav aria-label="Primary navigation">
           <a href="#work">Work</a>
