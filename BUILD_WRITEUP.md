@@ -14,7 +14,7 @@ The Evidence Finder adds skill filters, text search, visible claim limitations, 
 
 The update retains the existing React, TypeScript, and Vinext application, with Vite producing the deployable output. GitHub Pages serves the committed static files from `main:/docs` over HTTPS. The Evidence Finder requires no paid API key or application server.
 
-The [component](app/evidence-finder.tsx) contains four evidence records. A skill click updates React state; text input updates the query. The component filters the records in memory and renders matching claims, limitations, a result count, and source links. An unmatched query displays a recovery message. Search input remains in the browser, and a reload resets it.
+The [component](app/evidence-finder.tsx) now contains five evidence records. A skill click updates React state; text input updates the query. The component filters the records in memory and renders matching claims, limitations, a result count, and source links. An unmatched query displays a recovery message. Search input remains in the browser, and a reload resets it.
 
 ## Build incident and resolution
 
@@ -24,12 +24,13 @@ The recorded resolution is specific to this build attempt. It is not a claim tha
 
 ## Verification and limits
 
-Live Chrome checks covered four initial projects, one ML result, an EcoVision search, zero results for an unmatched query, and one Backend result. The released source and deployment are linked above.
+Historical live Chrome checks covered four initial projects, one ML result, an EcoVision search, zero results for an unmatched query, and one Backend result. The fifth Polite Scraper case was published on 10 October after Ardi confirmed reading the case and evidence wording aloud. [Release4fec946](https://github.com/ardiradi/ardiradi.github.io/commit/4fec946d717ce2140e419b6ff0e3e400da1b3e15) passed its build, Pages deployment, and six exact-file HTTP checks. Fresh five-case browser QA is tracked separately; these static checks do not establish a physical-phone or human review pass.
 
 The project cases retain their verification boundaries:
 
 - Internship Progress Copilot reports six passing local-demo tests covering API health, authentication, task CRUD, metrics, planning cache, and PDF jobs. Real-provider behavior, production use, and a tenfold time saving are not established.
 - PharmaCheck maps document-extraction output to three fields and preserves raw OCR for review. Date normalization, batch validation, and a persistent audit trail are not implemented.
+- The Polite Scraper's saved offline rerun reports 60 valid records, 63 HTML cache hits, and zero HTTP requests. One added real HTTP404 preserved all60; a separate offline fixture preserves59 when one original detail fails. Cached data is not a fresh crawl. The historical test log records22 passing offline tests, and submission review remains pending.
 - EcoVision uses 500 synthetic training rows and a constructed target formula. Its score is not economically validated.
 - The Heart Disease ML learning pipeline includes simulated exporter metrics. Conflicting accuracy artifacts still need reconciliation to a specific run.
 
@@ -37,4 +38,4 @@ The project cases retain their verification boundaries:
 
 AI assisted repository evidence inspection, case editing, component implementation, and build/deployment work. Ardi supplied his project facts, Copilot motivation and design choices, and personal contribution statements. He confirmed reading the four cases aloud and approved their voice.
 
-A next technical step is to add The Polite Scraper as a case using its actual collection, cache rerun, failure handling, and run reports. The technical write-up does not establish completion of the Fluency review gates, recorded demo, public personal story, verification badge, or showcase submission.
+The Polite Scraper case is now published with its actual cached-run and failure reports, explicit AI assistance, and author approval. AI Decision Flow is a candidate for a later case, preserving the distinction between local Qwen execution, zero-LLM Demo recovery, and unestablished semantic accuracy. Ardi's approved [public story](BUILD_STORY.md) explains his goal of improving AI engineering skills. The technical write-up does not establish completion of the Fluency human-review gates, recorded demo, analytics, Fluency graduation badge, or showcase submission.
