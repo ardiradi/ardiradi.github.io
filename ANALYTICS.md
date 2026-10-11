@@ -1,6 +1,6 @@
 # Optional Cloudflare Web Analytics
 
-Status: **Prepared, disabled, and not yet verified with a live analytics account.** No account or real beacon token was provided. An unconfigured component is not evidence of working analytics, visitors, or completed launch measurement.
+Status on 11 October 2026: **Owner account and hostname registered; public beacon token configured and static build passed. Live publication, browser execution, and received dashboard data still need verification.** The actual token came from the owner's Cloudflare installation snippet for `ardiradi.github.io` and is stored only in ignored `.env.local` for the build. A configured component is not evidence of received analytics or organic visitors.
 
 Cloudflare Web Analytics offers a free account-and-script setup without changing DNS or proxying the site through Cloudflare. The manual setup for a non-proxied site gets its JavaScript snippet from **Web Analytics > Manage site**. See [Cloudflare's overview](https://developers.cloudflare.com/web-analytics/about/) and [manual setup instructions](https://developers.cloudflare.com/web-analytics/get-started/).
 
@@ -13,7 +13,7 @@ Cloudflare Web Analytics offers a free account-and-script setup without changing
 - The component avoids duplicate/pre-existing scripts. Cleanup removes its pending script and event handlers without deleting someone else's beacon. Once loaded, the page beacon stays a singleton.
 - Only standard Cloudflare Web Analytics behavior is prepared. No custom search queries, form content, or click events are sent by this component. Cloudflare documents its beacon and performance collection in [RUM beacon for Web Analytics](https://developers.cloudflare.com/speed/observatory/rum-beacon/).
 
-## Owner activation steps - still pending
+## Activation and verification procedure
 
 1. Use the owner's chosen Cloudflare account and add **`ardiradi.github.io`** under Web Analytics.
 2. Open **Manage site** and copy only the public `token` value from the JavaScript snippet. Do not supply an API key, account credential, or private token.
@@ -26,6 +26,6 @@ To disable later, clear the variable, rebuild, and publish the disabled release.
 
 ## Verification boundary
 
-Source configuration checks and a fake-DOM harness can verify disabled behavior, token/host guards, injection, singleton handling, and cleanup without sending traffic to Cloudflare. They do not verify a real account, registration, received measurements, or the hosted browser result. Fresh browser QA is currently unavailable because Chrome control cannot load its request-header policy.
+Source configuration checks and a fake-DOM harness can verify disabled behavior, token/host guards, injection, singleton handling, and cleanup without sending traffic to Cloudflare. They do not verify received measurements or the hosted browser result. The owner logged into Cloudflare in the Codex browser on 11 October; this browser is available for fresh public-site and dashboard QA. Historical Chrome connection failures are preserved in the local work records.
 
-No analytics account was created, no token was activated, and no deployment is performed by preparing these files. Existing portfolio content, eight-submission count, and four project cases remain unchanged.
+The owner's existing account now has `ardiradi.github.io` registered, and the actual public token appears in both generated HTML and RSC data after a successful Node 22 build. Publication and live verification are separate steps. This activation preserves the existing full-name header, five project cases, narrative, and evidence; it adds no custom product events. Any test visits generated during activation are QA traffic.
