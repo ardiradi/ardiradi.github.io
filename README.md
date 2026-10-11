@@ -16,7 +16,7 @@ The [Evidence Finder](app/evidence-finder.tsx) filters five project records by s
 
 AI assisted evidence review, case editing, implementation of the Evidence Finder, and build work. Ardi supplied authentic project facts and design answers, confirmed the original four-case read-aloud review, and separately approved the Polite Scraper case and evidence wording after reading them aloud. See the write-up for verification scope and the actual build incident.
 
-Current evidence was updated on 11 October 2026. Static release [16cad77d](https://github.com/ardiradi/ardiradi.github.io/commit/16cad77df123f2f212cc6317efed9cf3f89da7e0) passed Pages deployment and thirteen exact-file HTTP comparisons. Browser QA retained All five / Backend two / `polite` one / clear five. Cloudflare's dashboard then displayed 2 visits and 6 page views in the activation/QA window; this is not evidence of organic traffic. Full physical-phone testing of the revised design, two human review verdicts, and an actual narrated demo remain pending.
+Current evidence was updated on 11 October 2026. Static release [16cad77d](https://github.com/ardiradi/ardiradi.github.io/commit/16cad77df123f2f212cc6317efed9cf3f89da7e0) passed Pages deployment and thirteen exact-file HTTP comparisons. Browser QA retained All five / Backend two / `polite` one / clear five. Cloudflare's dashboard then displayed 2 visits and 6 page views in the activation/QA window; this is not evidence of organic traffic. Ardi subsequently reported that the requested feature, link and portrait/landscape checks passed on Tecno Camon 20 Pro / Chrome; the write-up preserves the self-report's scope. Two human review verdicts and an actual narrated demo remain pending.
 
 ## Local build
 
